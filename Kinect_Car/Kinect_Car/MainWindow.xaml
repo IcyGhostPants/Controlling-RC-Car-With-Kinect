@@ -1,0 +1,57 @@
+﻿<Window x:Class="MotorKinect.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Motor Kinect" Height="1000" Width="1000" Loaded="WindowLoaded" Closing="WindowClosing">
+
+    <Grid Name="layoutGrid" Margin="10 0 10 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" Margin="0 0 0 20">
+            
+            <TextBlock DockPanel.Dock="Right" Margin="0 0 -1 0" VerticalAlignment="Bottom" FontFamily="Segoe UI" FontSize="18">Motor Kinect</TextBlock>
+            
+        </DockPanel>
+        <Grid Margin="10,52,-10,591" Grid.Row="1">
+
+
+            <TextBlock x:Name="LeftWrist" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Left Wrist" VerticalAlignment="Top"/>
+            <TextBlock x:Name="XValueLeft" HorizontalAlignment="Left" Margin="25,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+            <TextBlock x:Name="XLeft" HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" Text="X:" VerticalAlignment="Top"/>
+            <TextBlock x:Name="YValueLeft" HorizontalAlignment="Left" Margin="25,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+            <TextBlock x:Name="YLeft" HorizontalAlignment="Left" Margin="10,50,0,0" TextWrapping="Wrap" Text="Y:" VerticalAlignment="Top"/>
+            <TextBlock x:Name="ZValueLeft" HorizontalAlignment="Left" Margin="25,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="-2.933,3.159"/>
+            <TextBlock x:Name="ZLeft" HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" Text="Z:" VerticalAlignment="Top" RenderTransformOrigin="0.165,0.661"/>
+
+            <TextBlock x:Name="RightWrist" HorizontalAlignment="Left" Margin="431,13,0,0" TextWrapping="Wrap" Text="Right Wrist" VerticalAlignment="Top"/>
+            <TextBlock x:Name="XValueRight" HorizontalAlignment="Left" Margin="447,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="14.311,3.246"/>
+            <TextBlock x:Name="XRight" HorizontalAlignment="Left" Margin="431,33,0,0" TextWrapping="Wrap" Text="X:" VerticalAlignment="Top"/>
+            <TextBlock x:Name="YValueRight" HorizontalAlignment="Left" Margin="447,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="6.452,3.458"/>
+            <TextBlock x:Name="YRight" HorizontalAlignment="Left" Margin="431,53,0,0" TextWrapping="Wrap" Text="Y:" VerticalAlignment="Top"/>
+            <TextBlock x:Name="ZValueRight" HorizontalAlignment="Left" Margin="447,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="-2.933,3.159"/>
+            <TextBlock x:Name="ZRight" HorizontalAlignment="Left" Margin="431,73,0,0" TextWrapping="Wrap" Text="Z:" VerticalAlignment="Top"/>
+
+            <TextBlock x:Name="MotionGesture" HorizontalAlignment="Left" Margin="10,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Motion:" FontSize="14"/>
+            <TextBlock x:Name="TurnGesture" HorizontalAlignment="Left" Margin="431,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Turn:" FontSize="14"/>
+            <TextBlock x:Name="MotionStatus" HorizontalAlignment="Left" Margin="10,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  FontSize="22"/>
+            <TextBlock x:Name="TurnStatus" HorizontalAlignment="Left" Margin="431,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  FontSize="22"/>
+
+        </Grid>
+        <Viewbox Grid.Row="1" Stretch="Uniform" HorizontalAlignment="Center" Margin="0,210,0,0">
+            <Image Name="Image" Width="640" Height="369" Opacity="0.5"/>
+        </Viewbox>
+        <Canvas x:Name="CollisionCanvas">
+            <Rectangle x:Name="RectLeftTop" Fill="#FFDC0842" HorizontalAlignment="Left" Height="64" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="962" Opacity="0.4" Canvas.Top="325" Canvas.Left="10"/>
+            <Rectangle x:Name="RectLeftBottom" Fill="#FF08DCBF" HorizontalAlignment="Left" Height="73" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="962" Opacity="0.4" Canvas.Left="10" Canvas.Top="437"/>
+            <Rectangle x:Name="RectLeftTop_Copy1" Fill="#FF0808DC" HorizontalAlignment="Left" Height="48" Stroke="Black" VerticalAlignment="Top" Width="962" Opacity="0.4" Canvas.Top="389" Canvas.Left="10"/>
+            <Rectangle x:Name="RectLeftTop_Copy" Fill="#FF0808DC" HorizontalAlignment="Left" Height="48" Stroke="Black" VerticalAlignment="Top" Width="962" Opacity="0.4" Canvas.Top="510" Canvas.Left="10"/>
+            <Rectangle x:Name="RectLeftTop_Copy2" Fill="#FFDC0842" HorizontalAlignment="Left" Height="64" Stroke="Black" VerticalAlignment="Top" Width="962" Opacity="0.4" Canvas.Top="558" Canvas.Left="10"/>
+        </Canvas>
+
+       
+
+    </Grid>
+</Window>
