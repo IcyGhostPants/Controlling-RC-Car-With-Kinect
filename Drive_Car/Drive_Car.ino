@@ -26,11 +26,8 @@ int drivePower = 512;
 int steeringPower = 512;
 
 // Set Wi-Fi SSID and password here
-//const char* ssid = "HOME-C5DA";
-//const char* password = "EAF2DCA9B8DF4842";
-//const char* ssid = "fgcu-campus";
-const char* ssid = "RobotLab-2.4Ghz"; // USE THIS FOR DEMO
-const char* password = "happyshoe084";
+const char* ssid = "INSERT_SSID_HERE";
+const char* password = "INSERT_WIFI_PASSWORD_HERE";
 
 // Create server
 ESP8266WebServer server(80);
@@ -68,8 +65,6 @@ void setup(void){
   pinMode(STEER_MOTOR_DIRECTION, OUTPUT);
 
   WiFi.mode(WIFI_STA);
-  //WiFi.disconnect();
-  //delay(100);
 
   /* Begin transmitting data and establish Wi-Fi connection.
    * When connection is established, display success message
@@ -77,8 +72,7 @@ void setup(void){
    */
   Serial.begin(115200);
   
-  WiFi.begin(ssid); // USE THIS FOR DEMO
-  //WiFi.begin(ssid, password);
+  WiFi.begin(ssid, password);
 
   // Wait for connection
   while (WiFi.status() != WL_CONNECTED) {
